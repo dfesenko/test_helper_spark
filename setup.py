@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup
 setup(
   name = 'test_helper_spark',
   packages = ['test_helper_spark'],

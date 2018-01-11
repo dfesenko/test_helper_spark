@@ -2,5 +2,5 @@
 
 ## Installation:
 
-    pip install test_helper
-    pip install --upgrade git+https://github.com/rospotniuk/test_helper.git
+    pip install test_helper_spark
+    pip install --upgrade git+https://github.com/dfesenko/test_helper_spark.git

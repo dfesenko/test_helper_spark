@@ -1,2 +1,6 @@
-# test_helper_spark
-lib for checking the correct answers of the course "Intro to Big Data with Apache Spark"
+# Test Helper for "Data Science with Python" Course
+
+## Installation:
+
+    pip install test_helper
+    pip install --upgrade git+https://github.com/rospotniuk/test_helper.git

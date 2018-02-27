@@ -43,16 +43,22 @@ def lab1_test_ex_4(letters, occurrence):
                             'Incorrect dict: {}'.format(occurrence),
                             'Correct dict: {}'.format(occurrence))
     
-def lab1_test_ex_5(flat_pairs, flattened_pairs):
-    res1 = flat_pairs.take(5) + flat_pairs.top(5)
-    Test.assertEqualsHashed(res1, '2d2805155c2517db1d1d38e255d8c0ef7788dc75',
+def lab1_test_ex_5(pairs, flat_pairs, flattened_pairs):
+    res1 = pairs.take(5) + pairs.top(5)
+    Test.assertEqualsHashed(res1, 'fb52be8957a9bdf4eaf329b26cdb707cdec41135',
                             'Incorrect RDD: [{}, ...]'.format(list_continious(res1)),
                             'Correct RDD: [{}, ...]'.format(list_continious(res1)))
     
-    res2 = flattened_pairs.take(10) + flattened_pairs.top(10)
-    Test.assertEqualsHashed(res2, 'a27cbc10fe790d594c9d166a74d53ad5a78d7eb5',
+    res2 = flat_pairs.take(10) + flat_pairs.top(10)
+    Test.assertEqualsHashed(res2, 'a0e5a552e17d1c96511d392768c197e7318ec479',
                             'Incorrect RDD: [{}, ...]'.format(list_continious(res2)),
                             'Correct RDD: [{}, ...]'.format(list_continious(res2)))
+    
+    res3 = flattened_pairs.take(10) + flattened_pairs.top(10)
+    Test.assertEqualsHashed(res3, 'a0e5a552e17d1c96511d392768c197e7318ec479',
+                            'Incorrect RDD: [{}, ...]'.format(list_continious(res3)),
+                            'Correct RDD: [{}, ...]'.format(list_continious(res3)))
+    
     
 def lab1_test_ex_6(number_pairs, number_duplicates):
     res1 = number_pairs.collect()
